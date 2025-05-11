@@ -4,10 +4,8 @@ import { ArrowRight, ChevronRight, Sun, Zap, Globe, Users, BarChart4, Mail } fro
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { TestimonialCard } from "@/components/testimonial-card"
 import { ContactForm } from "@/components/contact-form"
 import { ModeToggle } from "@/components/mode-toggle"
-import { SolarKitCard } from "@/components/solar-kit-card"
 
 export default function Home() {
   return (
@@ -20,14 +18,8 @@ export default function Home() {
               <span className="font-bold text-xl tracking-tight">LuminateAfrica</span>
             </Link>
             <nav className="hidden gap-6 md:flex">
-              <Link href="#features" className="text-sm font-medium transition-colors hover:text-primary">
-                Solutions
-              </Link>
               <Link href="#vision" className="text-sm font-medium transition-colors hover:text-primary">
                 Vision
-              </Link>
-              <Link href="#testimonials" className="text-sm font-medium transition-colors hover:text-primary">
-                Testimonials
               </Link>
               <Link href="#contact" className="text-sm font-medium transition-colors hover:text-primary">
                 Contact
@@ -43,6 +35,7 @@ export default function Home() {
           </div>
         </div>
       </header>
+
       <main className="flex-1">
         {/* Hero Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-b from-background to-muted">
@@ -59,11 +52,8 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Button size="lg" className="bg-amber-500 hover:bg-amber-600 text-white">
-                    Explore Solutions
+                    Join the Movement
                     <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                  <Button variant="outline" size="lg">
-                    Our Impact
                   </Button>
                 </div>
               </div>
@@ -82,76 +72,12 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Stats Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
-          <div className="container px-4 md:px-6">
-            <div className="grid grid-cols-2 gap-6 md:grid-cols-4 lg:gap-12">
-              <div className="flex flex-col items-center justify-center space-y-2 text-center">
-                <div className="text-3xl font-bold sm:text-4xl md:text-5xl">50K+</div>
-                <div className="text-sm font-medium text-muted-foreground">Homes Powered</div>
-              </div>
-              <div className="flex flex-col items-center justify-center space-y-2 text-center">
-                <div className="text-3xl font-bold sm:text-4xl md:text-5xl">12</div>
-                <div className="text-sm font-medium text-muted-foreground">African Countries</div>
-              </div>
-              <div className="flex flex-col items-center justify-center space-y-2 text-center">
-                <div className="text-3xl font-bold sm:text-4xl md:text-5xl">98%</div>
-                <div className="text-sm font-medium text-muted-foreground">Customer Satisfaction</div>
-              </div>
-              <div className="flex flex-col items-center justify-center space-y-2 text-center">
-                <div className="text-3xl font-bold sm:text-4xl md:text-5xl">75MW</div>
-                <div className="text-sm font-medium text-muted-foreground">Clean Energy Generated</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section id="features" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-amber-100 px-3 py-1 text-sm text-amber-700 dark:bg-amber-800/30 dark:text-amber-500">
-                  Solar Solutions
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Tailored Solar Kits</h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Designed specifically for African environments and needs, our solar kits provide reliable, sustainable
-                  energy.
-                </p>
-              </div>
-            </div>
-            <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-3 lg:gap-12">
-              <SolarKitCard
-                title="Home Essential"
-                description="Perfect for small homes and basic power needs"
-                capacity="1.5kW"
-                coverage="3-4 rooms"
-                price="$899"
-                features={["LED lighting", "Phone charging", "TV & small appliances", "Easy installation"]}
-                imageSrc="/placeholder.svg?height=400&width=600"
-              />
-              <SolarKitCard
-                title="Business Pro"
-                description="Reliable power for small to medium businesses"
-                capacity="5kW"
-                coverage="Office space up to 200m²"
-                price="$2,499"
-                features={["Full office equipment", "AC support", "Refrigeration", "Battery backup"]}
-                imageSrc="/placeholder.svg?height=400&width=600"
-                featured={true}
-              />
-              <SolarKitCard
-                title="Community Power"
-                description="Designed for villages and community centers"
-                capacity="10kW"
-                coverage="Multiple buildings"
-                price="$5,999"
-                features={["Shared electricity", "Water pumping", "Community facilities", "Expandable system"]}
-                imageSrc="/placeholder.svg?height=400&width=600"
-              />
-            </div>
-          </div>
+        {/* Coming Soon Banner */}
+        <section className="w-full py-16 text-center bg-yellow-50 dark:bg-yellow-900">
+          <h2 className="text-3xl font-bold text-amber-600">We’re Launching Soon</h2>
+          <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
+            LuminateAfrica is preparing to transform energy access across the continent. Be part of the journey.
+          </p>
         </section>
 
         {/* Vision/Mission Section */}
@@ -249,46 +175,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Testimonials Section */}
-        <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-amber-100 px-3 py-1 text-sm text-amber-700 dark:bg-amber-800/30 dark:text-amber-500">
-                  Testimonials
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Voices of Change</h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Hear from communities and businesses that have been transformed by our solar solutions.
-                </p>
-              </div>
-            </div>
-            <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
-              <TestimonialCard
-                quote="LuminateAfrica's solar kit has transformed our small clinic. We now have reliable power for medical equipment and can serve patients 24/7."
-                author="Dr. Amara Okafor"
-                role="Medical Director"
-                location="Community Health Center, Nigeria"
-                imageSrc="/placeholder.svg?height=200&width=200"
-              />
-              <TestimonialCard
-                quote="As a small business owner, consistent power was my biggest challenge. Since installing LuminateAfrica's Business Pro kit, my revenue has increased by 40%."
-                author="Emmanuel Kwesi"
-                role="Restaurant Owner"
-                location="Accra, Ghana"
-                imageSrc="/placeholder.svg?height=200&width=200"
-              />
-              <TestimonialCard
-                quote="Our village installed the Community Power system last year. Now our children can study at night, and we've started three new community businesses."
-                author="Fatima Diallo"
-                role="Village Elder"
-                location="Rural Senegal"
-                imageSrc="/placeholder.svg?height=200&width=200"
-              />
-            </div>
-          </div>
-        </section>
-
         {/* Contact Section */}
         <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
           <div className="container px-4 md:px-6">
@@ -362,6 +248,7 @@ export default function Home() {
           </div>
         </section>
       </main>
+
       <footer className="w-full border-t py-6 md:py-0">
         <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
           <div className="flex items-center gap-2">
