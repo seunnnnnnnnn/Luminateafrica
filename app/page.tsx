@@ -60,7 +60,7 @@ export default function Home() {
               <div className="flex items-center justify-center">
                 <div className="relative aspect-video overflow-hidden rounded-xl">
                   <img
-                    src="/hans-veth-8V1HvdrB97g-unsplash.jpg"
+                    src="ChatGPT Image MAy11,2025, 02_02_45 AM.png"
                     alt="Solar panels in an African landscape"
                     className="object-cover w-full h-full"
                     width={1280}
